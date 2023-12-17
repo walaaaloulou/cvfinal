@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>CV professionnelle barcha</title>
+  <link rel="stylesheet" href="stylee.css">
+  
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <img src="logo.jpeg" class="logo">
+      <ul>
+        <li><a href="file:///C:/Users/walaa/OneDrive/Documents/jjjj/cvpro.html">Home</a></li>
+        <li><a href="file:///C:/Users/walaa/OneDrive/Documents/jjjj/obj.html">Objective</a></li>
+        <li><a href="file:///C:/Users/walaa/OneDrive/Documents/jjjj/etude.html">Étude</a></li>
+        <li><a href="file:///C:/Users/walaa/OneDrive/Documents/jjjj/competence.html">Compétence</a></li>
+        <li><a href="file:///C:/Users/walaa/OneDrive/Documents/jjjj/realisation.html">Réalisations</a></li>
+        <li><a href="file:///C:/Users/walaa/OneDrive/Documents/jjjj/interet.html">Centres d'intérêt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li><p class="line" id="line1"></p></li>
+        <li><p class="line" id="line2"></p></li>
+        <li><p class="line" id="line3"></p></li>
+        <li><p class="line" id="line4"></p></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    var lines = [
+      "Bacalaureat en lycée éthatique section science exp mention bien année 2021",
+      "Cycle préparatoire section pc admise au concours national année 2023",
+      "Cycle d'ingenieure à esprit en génie informatique",
+      "Cours axes sur la programmation, les bases de données, et la conception logicielle"
+    ];
+
+    function displayLines(index) {
+      if (index < lines.length) {
+        var currentLine = document.getElementById('line' + (index + 1));
+        currentLine.textContent = lines[index];
+        currentLine.style.opacity = 1;
+
+        setTimeout(function() {
+          displayLines(index + 1);
+        }, 2000);
+      }
+    }
+
+    displayLines(0);
+  </script>
+</body>
+</html>
